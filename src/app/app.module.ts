@@ -8,7 +8,8 @@ import { AppComponent } from './app.component';
 import { BookComponent } from './book/book.component';
 import { PersonComponent } from './person/person.component';
 import { ListPersonComponent } from './list-person/list-person.component';
-
+import {ChildComponent} from './child.component';
+import {ParentComponent} from './parent.component'
 
 @NgModule({
   declarations: [
@@ -16,7 +17,9 @@ import { ListPersonComponent } from './list-person/list-person.component';
     Wordcomponent,
     BookComponent,
     PersonComponent,
-    ListPersonComponent
+    ListPersonComponent,
+    ChildComponent,
+    ParentComponent
   ],
   imports: [
     BrowserModule,
