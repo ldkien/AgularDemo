@@ -1,3 +1,20 @@
-<p>
-  book works!
-</p>
+<button (click)="showForm()">Click Show Form</button>
+<div *ngIf="isShowForm">
+  <input placeholder="English" [(ngModel)] = "english"/>
+</div>
+<br/>
+<div>
+  <select [(ngModel)] ="filterStatus">
+    <option value="XEM_TAT_CA">Xem tat ca</option>
+    <option value="XEM_DA_NHO">Xem da nho</option>
+    <option value="XEM_CHUA_NHO">Xem chua nho</option>
+  </select>
+  <div *ngFor="let word of arrWord">
+    <div [ngStyle]="{background:'gray',margin:'20px'}" *ngIf="filter(word.mem)" >
+      <h4 [ngStyle]="{color:word.mem?'green':'red'}"> {{word.en}}</h4>
+      <p>{{word.vi}}</p>
+      <button (click)="xoa(word.id);">Xoa</button>
+      <button (click)="word.mem=!word.mem">{{word.mem?'Chua thuoc':'Da thuoc'}}</button>
+    </div>
+  </div>
+</div>
