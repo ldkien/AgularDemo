@@ -1,3 +1,4 @@
+import { CardComponent } from './card.component';
 import { Wordcomponent } from './word.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -9,7 +10,8 @@ import { BookComponent } from './book/book.component';
 import { PersonComponent } from './person/person.component';
 import { ListPersonComponent } from './list-person/list-person.component';
 import {ChildComponent} from './child.component';
-import {ParentComponent} from './parent.component'
+import {ParentComponent} from './parent.component';
+import { LearnPipeComponent } from './learn-pipe/learn-pipe.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,9 @@ import {ParentComponent} from './parent.component'
     PersonComponent,
     ListPersonComponent,
     ChildComponent,
-    ParentComponent
+    ParentComponent,
+    CardComponent,
+    LearnPipeComponent
   ],
   imports: [
     BrowserModule,
