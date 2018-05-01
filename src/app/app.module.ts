@@ -3,6 +3,7 @@ import { Wordcomponent } from './word.component';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms'
+import {HttpModule} from '@angular/http';
 
 
 import { AppComponent } from './app.component';
@@ -12,6 +13,7 @@ import { ListPersonComponent } from './list-person/list-person.component';
 import {ChildComponent} from './child.component';
 import {ParentComponent} from './parent.component';
 import { LearnPipeComponent } from './learn-pipe/learn-pipe.component';
+import { HttpServiceComponent } from './http-service/http-service.component';
 
 @NgModule({
   declarations: [
@@ -23,11 +25,13 @@ import { LearnPipeComponent } from './learn-pipe/learn-pipe.component';
     ChildComponent,
     ParentComponent,
     CardComponent,
-    LearnPipeComponent
+    LearnPipeComponent,
+    HttpServiceComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpModule
   ],
   providers: [],
   bootstrap: [AppComponent]
