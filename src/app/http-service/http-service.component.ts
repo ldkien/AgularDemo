@@ -8,12 +8,14 @@ import { Component, OnInit } from '@angular/core';
   providers : [IpService]
 })
 export class HttpServiceComponent implements OnInit {
+  ip:String;
 
   constructor(private ipService : IpService) {
-    this.ipService.getIp().then(ip => console.log(ip)).catch(ex =>console.log(ex));
+    
   }
 
   ngOnInit() {
+    this.ipService.getIp().then(ip => this.ip=ip).catch(ex =>console.log(ex));
   }
 
 }
