@@ -12,7 +12,8 @@ export class WeatherComponent implements OnInit {
   constructor() { }
 
   onSubmit(formSignIn){
-    console.log(formSignIn.value);
+    console.log(formSignIn);
+    throw new Error('Form is invalid');
   }
   ngOnInit() {
   }
